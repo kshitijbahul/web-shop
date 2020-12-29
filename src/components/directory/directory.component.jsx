@@ -55,8 +55,8 @@ class Directory extends React.Component{
                     We are destruction the section object using the () 
                     and then {} to destructure
                     */
-                    this.state.sections.map(({title, imageUrl, id, size}) => 
-                        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
+                    this.state.sections.map(({id, ...menuItemProps }) => 
+                        <MenuItem key={id} { ...menuItemProps }/>
                     )
                 }
             </div>
